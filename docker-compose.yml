@@ -1,0 +1,28 @@
+services:
+  app:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile
+    ports:
+      - "5000:5000"
+    environment:
+      - MYSQL_HOST=db
+      - MYSQL_PORT=3306
+      - MYSQL_USER=root
+      - MYSQL_PASSWORD=rootpassword
+      - MYSQL_DB=loan_default
+    depends_on:
+      - db
+
+  db:
+    image: mysql:8.0
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpassword
+      MYSQL_DATABASE: loan_default
+    ports:
+      - "3306:3306"
+    volumes:
+      - db_data:/var/lib/mysql
+
+volumes:
+  db_data:
