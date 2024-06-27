@@ -164,3 +164,4 @@ cython_debug/
 # data files
 *.zip
 *.xls
+*.csv
