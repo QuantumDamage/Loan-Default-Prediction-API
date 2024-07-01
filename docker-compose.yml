@@ -13,6 +13,8 @@ services:
       - MYSQL_DB=loan_default
     depends_on:
       - db
+    volumes:
+      - .:/app
 
   db:
     image: mysql:8.0
