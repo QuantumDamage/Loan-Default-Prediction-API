@@ -22,7 +22,6 @@ def test_api_predictions(get_test_data):
     assert response.status_code == 200, f'Error: {response.status_code}, {response.text}'
 
     predictions = response.json()
-    print(predictions)
     predicted_labels = predictions['predictions']
     
     correct_predictions = (predicted_labels == expected_labels).sum()
