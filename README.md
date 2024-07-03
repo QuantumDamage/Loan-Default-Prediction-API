@@ -9,3 +9,4 @@
 - [ ] dodać xgboost
 - [ ] dodać github action build docker-compose
 - [ ] dodać min_max_scaler 
+- [ ] mikrus: https://mikr.us/; https://github.com/marketplace/actions/docker-compose-remote-ssh-deploy
